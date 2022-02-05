@@ -1,0 +1,258 @@
+\documentclass[a4paper,twocolumn]{jsarticle}
+%\documentclass[a4j,twocolumn]{jarticle} % 'jsarticle' が使えない場合はこちらを利用
+
+% 上記 documentclass のオプションは自由に追加してもよい。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ページ設定 (この項目は論文著者は編集しないこと。)
+
+% 芸術科学会学術会議用スタイルパッケージ
+\usepackage{artsci-conf-j} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% パッケージ一覧 (必要なパッケージを任意に追加してよい)
+
+\usepackage{amsmath, amssymb}	% AMS-LaTeX
+\usepackage[dvipdfmx]{graphicx}	% 「graphics」パッケージに変更してもよい。
+\usepackage{float}		% 図表が記述位置から飛ばないためのパッケージ
+\usepackage{url}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% マクロ一覧 (必要なマクロをこの部分に記述)
+
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 図ファイルのパス設定
+
+\graphicspath{{fig/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% タイトル、著者、所属、概要
+
+% 日本語タイトル
+\jtitle{
+映像情報・芸術科学フォーラム \\
+論文サンプル（\LaTeX 版）
+}
+
+% 英語タイトル
+\etitle{
+Expressive Japan \\
+Sample Style (\LaTeX Version)
+}
+
+% 日本語著者
+% 共著者氏名の間隔は ~ や \quad 等で適宜調節のこと。
+\jauthor{
+工科太郎\({}^\dagger\) \quad
+メディア次郎\({}^\ddagger\) \quad
+ゲーム三郎\({}^\ddagger\)
+}
+
+% 英語著者
+\eauthor{
+Taro KOUKA\({}^\dagger\) \quad
+Jiro MEDIA\({}^\ddagger\) \quad
+Saburo GAME\({}^\ddagger\)
+}
+
+% 日本語所属
+\jaffiliation{
+\(\dagger\) 東京工科大学バイオ・情報メディア研究科 ~~~
+	〒192-0982 東京都八王子市片倉町1404-1 \\
+\(\ddagger\) 東京工科大学メディア学部 ~~~
+	〒192-0982 東京都八王子市片倉町1404-1
+}
+
+% 英語所属
+\eaffiliation{
+\(\dagger\) Graduate School of Bionics, Computer and Media Sciences,
+	Tokyo University of Technology \\
+\(\ddagger\) School of Media Science,
+	Tokyo University of Technology
+}
+
+% 連絡先電子メールアドレス
+% (
+% このサンプルでは「＠」を2バイト文字にすることで対応してある。)
+\email{
+taro@gamescience.jp
+}
+
+% 日本語概要
+\jabstract{
+本稿は、映像情報・芸術科学フォーラム投稿用の LaTeX サンプルを提供するものである。
+このサンプルは芸術科学会論文誌のサンプルとの整合性を重要視して作成されたものである。
+}
+
+% 英語概要
+\eabstract{
+This article is to provide LaTeX sample for posting of ``Expressive Japan''.
+This sample is created with emphasis on consistency with the sample of
+the journal of the Society of Art and Science.
+}
+
+% 日本語キーワード
+\jkeyword{
+LaTeX, 論文, テンプレート, 学会
+}
+
+% 英語キーワード
+\ekeyword{
+LaTeX, article, template, society
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ここより論文本体
+\pagestyle{empty}
+
+\begin{document}
+\maketitle
+
+\section{原稿用紙}
+\subsection{タイトルその他(1ページ目上部)に関して}
+\label{subsec:intro}
+技術研究報告の1ページ目上部には、タイトル、発表者氏名、所属、住所、メールアドレス、
+キーワードの和文と英文及びあらまし(和文300字程度、英文100語程度)を、それぞれ記述すること。
+
+[特別招待講演]の方は[特別招待講演]、[特別講演]の方は[特別講演]、
+[招待講演]の方は[招待講演]、[基調講演]の方は[基調講演]等、
+一般の講演以外の方はタイトルの前に[○○講演]と必ず挿入すること。
+
+\section{本文に関して}
+本文は\ref{subsec:intro}の「タイトルその他」に続けて記述する。
+記述に関しては、このテンプレートファイルを用いて作成するか、
+あるいは、任意のA4判の用紙を利用することができる。
+その場合には、本文は左右18cm、天地25.5cm以内の長さにおさまるよう行間・字間を調整すること。
+
+\subsection{原稿提出枚数}
+連絡用紙に指定の提出枚数が記載してあり、
+図・表、写真を含め制限枚数以内で作成すること。
+原稿を作成する前に、手持ちの原稿量と制限枚数とを十分勘定して必ず
+制限枚数におさまるようご注意すること。
+枚数を超過した原稿は受け付けられない。
+
+\subsection{図表}
+
+図や表を論文本体に掲載する場合には、すべての図表を本文から引用し、
+適切な位置（引用された文章に近い位置）に表示すること。
+すべての図表には通し番号および題名をつけること。
+
+LaTeX で論文を執筆する場合には、
+図を EPS ファイルや PDF ファイル等の画像ファイルとして用意し、
+figure 環境中にて includegraphics を用いて本文中に挿入する。
+図には必ず label を付加し、本文から label を用いて参照する。
+本サンプルの場合には、「図\ref{fig:sample}参照」というように記載すれば、
+適切に label から図番号を設定してくれるはずである。
+以下にその一例をしめす。
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=40mm]{fig-sample.eps}
+ \caption{\small{図の挿入例。}}
+ \label{fig:sample}
+\end{figure}
+
+表についても同様に、label を付加し、本文から label を用いて参照する。
+一例として、以下の表 \ref{tab:sample} をご参照いただきたい。
+
+\begin{table}[H]
+ \caption{\small{表の挿入例。}}
+ \centering
+ \begin{tabular}{|c|c|c|c|}
+	\hline
+		& 数学	& 英語	& 国語	\\ \hline
+	太郎	& 68	& 91	& 34	\\
+	次郎	& 53	& 12	& 97	\\ \hline
+ \end{tabular}
+ \label{tab:sample}
+\end{table}
+
+本サンプルでは、図表の出現が tex ファイルの記述箇所と同一となるように、
+figure 環境や table 環境のオプションに「H」を用いているが、
+このオプションは適宜変更しても構わない。
+
+また、図表を一段組で大きく描画したい場合は、
+figure 環境や table 環境の末尾にアスタリスクをつけた
+「\verb+\begin{figure*} 〜 \end{figure*}+」や
+「\verb+\begin{table*} 〜 \end{table*}+」を用いる。
+図 \ref{fig:sample-big} でその例を示す。
+
+\begin{figure*}[ht]
+ \centering
+ \includegraphics[width=80mm]{fig-sample.eps}
+ \caption{\small{一段組での図の挿入例。}}
+ \label{fig:sample-big}
+\end{figure*}
+
+\section{数式}
+数式のインラインモードは \(x^2 + y^2 \leq 1\) のように表示させることができる。
+インラインモードで「\verb+$...$+」を使うやり方は、
+近年の LaTeX ではあまり推奨されていないが、その利用は妨げない。
+
+ディスプレイ数式モードを利用する際に推奨するのは equation 環境である。
+\begin{equation}
+	\bA_p = \frac{\bA\cdot\bB}{|\bB|^2}\bB .
+	\label{eq:samp1}
+\end{equation}
+数式の参照は「\verb+\ref+」ではなく「\verb+\eqref+」を用いる。
+上記の数式を参照すると「式\eqref{eq:samp1}」となる。
+このように、\verb+\eqref+ を用いた場合は数式中と同じ様式の括弧がつく。
+
+また、複数行にわたる数式を表示したい場合は align 環境を用いることを推奨する。
+以下の式\eqref{eq:samp2}にその例を示す。
+
+\begin{align}
+	& \begin{bmatrix}
+	a_{11} & a_{12} & \cdots & a_{1n} \\
+	a_{21} & a_{22} & \cdots & a_{2n} \\
+	\vdots & \vdots & \ddots & \vdots \\
+	a_{m1} & a_{m2} & \cdots & a_{mn} \\
+	\end{bmatrix}
+	\otimes
+	\begin{bmatrix}
+	b_{11} & b_{12} & \cdots & b_{1n} \\
+	b_{21} & b_{22} & \cdots & b_{2n} \\
+	\vdots & \vdots & \ddots & \vdots \\
+	b_{m1} & b_{m2} & \cdots & b_{mn} \\
+	\end{bmatrix} \notag \\
+	& \qquad \qquad = \sum_{i}^{m}\sum_{j}^{n}a_{ij}b_{ij} .
+	\label{eq:samp2}
+\end{align}
+
+eqnarray 環境は、最近の LaTeX では幾つかのパッケージと同時に利用すると
+問題が発生することがあるため、利用は推奨しない。
+
+\subsection{参考文献}
+参考文献は本文の後に全部まとめて列挙する。
+すべての参考文献は本文中で引用する。すべての参考文献には通し番号をつける。
+
+本稿の末尾に、英語論文と日本語論文の参考文献の一例 \cite{Ito04} を示す。
+原則として、著者名、タイトル、掲載誌、（論文の場合には巻と号）、
+ページ数、発行年を記載すること。
+著書の場合には、著書を特定する情報（出版社、ISBNなど）もできる限り記載すること。
+なおウェブサイト等\cite{ArtScience}を引用する場合には、この限りではない。
+
+本ファイルは\BibTeX を利用することを想定したサンプルとなっているが、
+\BibTeX を利用せずに参考文献リストを記述する場合は、
+「BibTeXを利用しない場合」と記されている箇所のコメントアウトされている部分を
+参照のこと。
+
+\section{PDF化について}
+\begin{itemize}
+\item セキュリティ設定は無効にすること。
+\item ページ番号は挿入しないこと。
+\end{itemize}
+
+\section{まとめ}
+
+本稿では、映像情報・芸術科学フォーラム投稿用の \LaTeX 版サンプルを提供した。
+
+\bibliography{bibtex_samp} % BibTeX ファイル (.bib) を記述
+\bibliographystyle{junsrt} % 番号を掲載順にソートする。
+
+\end{document}
